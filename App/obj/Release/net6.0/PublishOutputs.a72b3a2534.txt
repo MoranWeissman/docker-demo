@@ -1,0 +1,5 @@
+/home/moranw/projects/Private/docker-demo/App/bin/Release/net6.0/publish/DotNet.Docker
+/home/moranw/projects/Private/docker-demo/App/bin/Release/net6.0/publish/DotNet.Docker.dll
+/home/moranw/projects/Private/docker-demo/App/bin/Release/net6.0/publish/DotNet.Docker.deps.json
+/home/moranw/projects/Private/docker-demo/App/bin/Release/net6.0/publish/DotNet.Docker.runtimeconfig.json
+/home/moranw/projects/Private/docker-demo/App/bin/Release/net6.0/publish/DotNet.Docker.pdb
