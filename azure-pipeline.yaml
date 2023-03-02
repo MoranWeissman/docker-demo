@@ -1,0 +1,24 @@
+name: $(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- main
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: azure-pipeline-templates
+    
+    - repository: gitops
+      type: git
+      name: azure-agents-gitops
+
+variables:
+  projectDirPath: 'App'
+  awsAccountId: '704909879244'
+
+extends:
+  template: kaniko/build-docker-image-via-kaniko-job.yml@templates
+  parameters:            
+    dockerRegistry: '704909879244.dkr.ecr.eu-west-1.amazonaws.com'
+    clusterSecretName: 'eks-azdo-agents'
