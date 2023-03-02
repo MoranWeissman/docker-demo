@@ -5,10 +5,10 @@ WORKDIR /App
 COPY . ./
 
 # Restore as distinct layers
-RUN dotnet restore
+RUN dotnet restore ./App/DotNet.Docker.csproj --no-cache --configfile "NuGet.Config"
 
 # Build and publish a release
-RUN dotnet publish -c Release -o out
+RUN dotnet publish ./App/DotNet.Docker.csproj -c Release --no-restore -o out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
