@@ -7,11 +7,7 @@ resources:
   repositories:
     - repository: templates
       type: git
-      name: azure-pipeline-templates
-    
-    - repository: gitops
-      type: git
-      name: azure-agents-gitops
+      name: azure-pipeline-templates    
 
 variables:
   projectDirPath: 'App'
